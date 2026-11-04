@@ -6,7 +6,14 @@ subtitle: "Visualisations and case studies"
 
 ## Explore the data
 
-*The interactive chart builder will appear here once the publishable dataset is ready.*
+<div class="cm" id="climateb-map">
+  <noscript>The interactive map needs JavaScript.</noscript>
+</div>
+<script src="../js/climateb-world.js"></script>
+<script src="../js/climateb-map-data.js"></script>
+<script src="../js/climateb-map.js"></script>
+
+*More interactive charts will appear here once the publishable dataset is ready.*
 
 ## Case studies
 
