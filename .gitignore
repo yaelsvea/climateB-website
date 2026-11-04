@@ -1,0 +1,11 @@
+# Built site (GitHub builds it again on every push)
+public/
+resources/_gen/
+.hugo_build.lock
+
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store

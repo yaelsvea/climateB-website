@@ -1,0 +1,73 @@
+# ---------------------------------------------------------------
+# climateB website: main settings file
+# Change the text between the quotation marks, save, and the
+# preview in RStudio updates. Lines starting with # are comments.
+# ---------------------------------------------------------------
+
+# "/" works for the local preview. The GitHub deploy workflow
+# replaces this automatically with the real web address.
+baseURL = "/"
+title = "climateB"
+theme = "hugo-theme-cleanwhite"
+languageCode = "en-us"
+preserveTaxonomyNames = true
+
+[pagination]
+  pagerSize = 5   # posts per page on the front page
+
+[params]
+  # Big picture at the top of the home page (file in static/img/)
+  header_image = "img/home-bg-jeep.jpg"
+  SEOTitle = "climateB | Climate action in banks"
+  description = "climateB studies how investor, NGO and industry pressure shapes banks' climate strategies. A research project at the University of St. Gallen (HSG)."
+  keyword = "climateB, banks, climate finance, non-state pressure, HSG"
+  slogan = "Climate action in banks: unpacking the role of non-state pressures"
+  upstreamAttribution = true
+
+  image_404 = "img/404-bg.jpg"
+  title_404 = "Page not found"
+  omit_categories = true
+
+  # Features switched off for now
+  dark_mode_toggle = false
+  algolia_search = false
+  page_view_counter = false
+  artalk_enable = false
+  reward = false
+  friends = false
+  bookmarks = false
+  about_me = true
+  last_posts = true
+
+  # Sidebar
+  sidebar_about_description = "A research project at the University of St. Gallen (HSG)."
+  featured_tags = false
+
+  [params.social]
+    rss = false
+    email = "CHANGE-ME@unisg.ch"
+    # github = "https://github.com/YOUR-GITHUB-NAME/YOUR-REPO"
+
+  # Links in the top menu
+  [[params.additional_menus]]
+    title = "RESEARCH"
+    href = "about"
+  [[params.additional_menus]]
+    title = "DATA"
+    href = "data"
+  [[params.additional_menus]]
+    title = "TEAM"
+    href = "team"
+  [[params.additional_menus]]
+    title = "ARCHIVE"
+    href = "archive"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "github"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true   # allows raw HTML (needed later for embedded charts)
