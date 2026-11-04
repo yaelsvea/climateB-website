@@ -31,6 +31,7 @@ preserveTaxonomyNames = true
 
   # Own style file (static/css/climateb.css): logo bar, full-width text
   custom_css = ["css/climateb.css"]
+  custom_js = ["js/climateb-slider.js"]
 
   # Features switched off
   dark_mode_toggle = false
