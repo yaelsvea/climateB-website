@@ -1,0 +1,102 @@
+/* climateB: own style tweaks on top of the Clean White theme */
+
+/* ---- Text uses the full page width (with a margin at the sides) ---- */
+.container, .container-fluid {
+  width: auto !important;
+  max-width: none !important;       /* to cap the width again, e.g. use: max-width: 1500px !important; */
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+@media (max-width: 767px) {
+  .container, .container-fluid { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ---- White top bar with the logo on the left ---- */
+.navbar-custom {
+  position: absolute;
+  background: #fff !important;
+  border-bottom: 1px solid #e6e6e6;
+}
+.navbar-custom .navbar-brand {
+  height: auto;
+  padding: 8px 0;
+  margin-left: 0 !important;
+}
+.navbar-custom .navbar-brand img {
+  height: 96px;
+  width: auto;
+  display: block;
+}
+.navbar-custom .nav li a,
+.navbar-custom.is-fixed .nav li a {
+  color: #2b2b2b;
+  padding-top: 46px;
+  padding-bottom: 46px;
+}
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+  color: #3f7a99;
+  background: transparent;
+}
+/* the bar sits above the picture, so push the picture down by the bar height */
+.intro-header { margin-top: 113px !important; }
+/* scrolling top bar: hides when you scroll down, slides back in when you scroll up (from tablet width up) */
+@media (min-width: 768px) {
+  .navbar-custom { -webkit-transition: background-color .3s; transition: background-color .3s; transform: translate3d(0,0,0); backface-visibility: hidden; }
+  .navbar-custom.is-fixed {
+    position: fixed;
+    top: -113px;
+    background-color: #fff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    border-bottom: 1px solid #e6e6e6;
+    -webkit-transition: -webkit-transform .3s; transition: transform .3s;
+  }
+  .navbar-custom.is-visible { transform: translate3d(0,100%,0); }
+}
+/* narrower windows: a bit less spacing so the six menu items fit in one line */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .navbar-custom .nav li a { padding-left: 9px; padding-right: 9px; font-size: 11px; letter-spacing: .5px; }
+}
+
+@media (max-width: 767px) {
+  .navbar-custom .navbar-brand img { height: 60px; }
+  .intro-header { margin-top: 77px !important; }
+  .navbar-custom .nav li a { padding-top: 12px; padding-bottom: 12px; }
+  .navbar-toggle { margin-top: 22px; border-color: #cfd6db; }
+  .navbar-custom .navbar-toggle .icon-bar { background-color: #2b2b2b; }
+  .navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus { background: #eef2f5; }
+}
+
+/* ---- Picture behind the page title: not as tall on sub pages ---- */
+.intro-header .site-heading,
+.intro-header .post-heading { padding-top: 90px; padding-bottom: 90px; }
+
+/* ---- News & Events list ---- */
+.news-item { border-bottom: 1px solid #e6e6e6; padding: 14px 0; }
+.news-item h3 { margin: 0 0 4px; }
+.news-meta { color: #777; font-size: 14px; margin: 0 0 6px; }
+
+/* ---- Team page: photo on top, text beneath (like the HSG people pages) ---- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 240px));   /* always two people next to each other; 240px = photo width */
+  gap: 36px;
+  margin: 10px 0 30px;
+}
+.team-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.team-card h3 { margin: 0 0 8px; font-size: 24px; font-weight: 300; line-height: 1.2; }
+.team-card p { margin: 0 0 6px; }
+.team-title { font-weight: 700; font-size: 14px; }
+.team-role { font-size: 15px; }
+.team-text { font-size: 14px; color: #555; margin-top: 10px; }
+@media (max-width: 575px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .team-card h3 { font-size: 18px; }
+  .team-title, .team-role, .team-text { font-size: 13px; }
+}
