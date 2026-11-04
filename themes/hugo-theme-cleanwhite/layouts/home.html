@@ -1,3 +1,12 @@
 {{ define "main" }}
-  {{ partial "portfolio.html" . }}
+<!-- climateB landing page: shows the text of content/_index.md -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 post-container">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</article>
 {{ end }}

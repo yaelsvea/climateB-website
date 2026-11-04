@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Research"
+subtitle: "Questions, approach and work packages"
 ---
 
 ## About climateB
@@ -17,4 +18,4 @@ climateB studies how pressure from investors, NGOs and industry shapes the clima
 
 ## Funding and partners
 
-(Add funder and partner names here. Logos go in the footer later.)
+(Add funder and partner names here. Logos can go in the page footer later.)
